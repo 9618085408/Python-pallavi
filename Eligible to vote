@@ -1,0 +1,19 @@
+
+
+def is_eligible_to_vote(year_of_birth):
+  current_year = datetime.datetime.now().year
+  age = current_year - year_of_birth
+
+  if age >= 18:
+    return True
+  else:
+    years_left = 18 - age
+    return False, years_left
+
+year_of_birth = int(input("Enter your year of birth: "))
+eligible, years_left = is_eligible_to_vote(year_of_birth)
+
+if eligible:
+  print("You are eligible to vote.")
+else:
+  print(f"You are not eligible to vote. You need to wait {years_left} more years.")
