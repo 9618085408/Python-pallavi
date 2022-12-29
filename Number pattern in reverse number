@@ -1,9 +1,0 @@
-numbrrows = 5
-
-for m in range(0, numbrrows+1):
-   
-    for n in range(numbrrows - m, 0, -1):
-       
-        print(n, end=' ')
-   
-    print()
