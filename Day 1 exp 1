@@ -1,0 +1,28 @@
+CHAR = 26
+ 
+def isoMorphic(str1, str2):
+    n = len(str1)
+    m = len(str2)
+ 
+    if n != m:
+        return "False"
+ 
+   
+    countChars1 = [0] * CHAR
+    countChars2 = [0] * CHAR
+ 
+    
+    for i in range(n):
+        countChars1[ord(str1[i]) - ord('a')] += 1
+        countChars2[ord(str2[i]) - ord('a')] += 1
+ 
+    
+    for i in range(n):
+        if countChars1[ord(str1[i]) - ord('a')] != countChars2[ord(str2[i]) - ord('a')]:
+            return "False"
+ 
+    return "True"
+ 
+ 
+
+print(isoMorphic("aab","xxy"))
