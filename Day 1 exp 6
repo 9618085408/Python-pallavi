@@ -1,0 +1,13 @@
+def maxarea(A,Len):
+    area = 0
+    for i in range(Len):
+        for j in range(i+1,Len):
+            area = max(area, min(A[j],A[i]) * (j-i))
+    return area
+a = input("Array = ").split(",")
+a1 = []
+for i in a:
+    a1.append(int(i))
+
+len1 = len(a)
+print(maxarea(a1,len1))
