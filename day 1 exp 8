@@ -1,0 +1,17 @@
+def is_valid_number(num):
+    
+    components = [4, 3, 2, 1]
+
+ 
+    for component in components:
+        if num >= component:
+            num -= component
+        else:
+            return False
+
+   
+    return num == 0
+
+
+print(is_valid_number(6)) 
+print(is_valid_number(9))
