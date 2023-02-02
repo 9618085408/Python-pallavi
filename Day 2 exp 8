@@ -1,0 +1,11 @@
+import re
+
+p = "m.*m"
+s = "madam"
+
+p = r"{}".format(p)
+p = re.compile(p)
+if p.fullmatch(s):
+    print("true")
+else:
+    print("false")
